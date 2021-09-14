@@ -21,7 +21,7 @@ export enum Difficulty {
 //Function that makes a call to our server, takes 2 parameters
 export const fetchQuizQuestions = async (amount:number, difficulty:Difficulty) => {
     try {
-        const endpoint = `/trivia/${amount}&${difficulty}&type=multiple`;
+        const endpoint = `https://kwizzmee-backend.herokuapp.com/trivia/${amount}&${difficulty}&type=multiple`;
         const data = await (await fetch(endpoint)).json()
         console.log(data);
         {/*We map through the results and create an object we can use */}
